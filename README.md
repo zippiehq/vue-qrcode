@@ -2,6 +2,8 @@
 
 > Qrcode component for [Vue.js](https://vuejs.org/). It is based on [QRious](https://github.com/neocotic/qrious).
 
+- [Website](https://xkeshi.github.io/vue-qrcode)
+
 
 
 ## Table of contents
@@ -19,10 +21,10 @@
 
 ```
 dist/
-├── vue-qrcode.js        (73 KB, UMD)
-├── vue-qrcode.min.js    (22 KB, UMD, compressed)
-├── vue-qrcode.common.js (73 KB, CommonJS)
-└── vue-qrcode.esm.js    (73 KB, ES Module)
+├── vue-qrcode.js        (75 KB, UMD)
+├── vue-qrcode.min.js    (19 KB, UMD, compressed)
+├── vue-qrcode.common.js (75 KB, CommonJS)
+└── vue-qrcode.esm.js    (75 KB, ES Module)
 ```
 
 
