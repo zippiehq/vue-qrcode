@@ -1,4 +1,4 @@
-import QRious from 'qrious/src/runtime/browser';
+import QRious from 'qrious';
 
 export default {
   props: {
