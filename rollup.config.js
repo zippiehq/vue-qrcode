@@ -6,37 +6,38 @@ const pkg = require('./package');
 const now = new Date();
 
 export default {
-  entry: 'src/index.js',
-  targets: [
+  input: 'src/index.js',
+  output: [
     {
-      dest: 'dist/vue-qrcode.js',
+      file: 'dist/vue-qrcode.js',
+      format: 'umd',
     },
     {
-      dest: 'dist/vue-qrcode.common.js',
+      file: 'dist/vue-qrcode.common.js',
       format: 'cjs',
     },
     {
-      dest: 'dist/vue-qrcode.esm.js',
+      file: 'dist/vue-qrcode.esm.js',
       format: 'es',
     },
     {
-      dest: 'docs/js/vue-qrcode.js',
+      file: 'docs/js/vue-qrcode.js',
+      format: 'umd',
     },
   ],
-  format: 'umd',
-  moduleName: 'VueQrcode',
+  name: 'VueQrcode',
   plugins: [
-    nodeResolve({
-      jsnext: true,
-    }),
+    nodeResolve(),
     commonjs(),
-    babel(),
+    babel({
+      exclude: 'node_modules/**',
+    }),
   ],
   banner: `/*!
  * vue-qrcode v${pkg.version}
  * https://github.com/${pkg.repository}
  *
- * Copyright (c) ${now.getFullYear()} ${pkg.author}
+ * Copyright (c) ${now.getFullYear()} Xkeshi
  * Released under the ${pkg.license} license
  *
  * Date: ${now.toISOString()}
