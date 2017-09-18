@@ -6,15 +6,22 @@
   "module": "dist/vue-qrcode.esm.js",
   "browser": "dist/vue-qrcode.js",
   "repository": "xkeshi/vue-qrcode",
+  "homepage": "https://xkeshi.github.io/vue-qrcode",
   "license": "MIT",
-  "author": "xkeshi",
+  "author": {
+    "name": "Chen Fengyuan",
+    "email": "chenfengyuan@outlook.com",
+    "url": "http://chenfengyuan.com"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
   "keywords": [
-    "vue",
-    "vuejs",
-    "vue.js",
-    "vue-component",
     "qrcode",
+    "vue",
     "component",
+    "vue-component",
     "html",
     "css",
     "javascript",
@@ -27,7 +34,7 @@
     "lint": "eslint ./src",
     "build": "rollup -c",
     "compress": "uglifyjs ./dist/vue-qrcode.js -o ./dist/vue-qrcode.min.js -c -m --comments /^!/",
-    "prebuild": "npm run lint",
+    "prebuild": "npm run lint --fix",
     "postbuild": "npm run compress",
     "start": "npm run dev"
   },
@@ -35,17 +42,17 @@
     "qrious": "^4.0.2"
   },
   "devDependencies": {
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-es2015": "^6.24.1",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.3.0",
-    "rollup": "^0.42.0",
-    "rollup-plugin-babel": "^2.7.1",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.7.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-watch": "^4.0.0",
-    "uglify-js": "^3.0.15"
+    "rollup-watch": "^4.3.1",
+    "uglify-js": "^3.1.1"
   },
   "peerDependencies": {
     "vue": "^2.2.0"

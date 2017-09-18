@@ -4,8 +4,6 @@
 
 - [Website](https://xkeshi.github.io/vue-qrcode)
 
-
-
 ## Table of contents
 
 - [Main](#main)
@@ -15,29 +13,23 @@
 - [Versioning](#versioning)
 - [License](#license)
 
-
-
 ## Main
 
-```
+```text
 dist/
 ├── vue-qrcode.js        (75 KB, UMD)
-├── vue-qrcode.min.js    (19 KB, UMD, compressed)
+├── vue-qrcode.min.js    (18 KB, UMD, compressed)
 ├── vue-qrcode.common.js (75 KB, CommonJS)
 └── vue-qrcode.esm.js    (75 KB, ES Module)
 ```
 
-
-
 ## Getting started
 
+### Install
 
-### Download
-
-- [Download the latest release](https://github.com/xkeshi/vue-qrcode/archive/master.zip).
-- Clone the repository: `git clone https://github.com/xkeshi/vue-qrcode.git`.
-- Install with [NPM](https://npmjs.com): `npm install xkeshi/vue-qrcode`.
-
+```bash
+npm install @xkeshi/vue-qrcode --save-dev
+```
 
 ### Usage
 
@@ -53,11 +45,7 @@ Vue.component('qrcode', VueQrcode);
 <qrcode value="Hello, World!" :options="{ size: 200 }"></qrcode>
 ```
 
-
-
 [⬆ back to top](#table-of-contents)
-
-
 
 ## Props
 
@@ -67,13 +55,11 @@ Vue.component('qrcode', VueQrcode);
 
 The value of the qrcode.
 
-
 ### options
 
 - Type: `Object`
 
 The options for the qrcode generator. References the [QRious's options](https://github.com/neocotic/qrious#api).
-
 
 ### tag
 
@@ -82,8 +68,6 @@ The options for the qrcode generator. References the [QRious's options](https://
 - Options: `'canvas'` and `'img'`
 
 The tag of the component root element.
-
-
 
 ## Browser support
 
@@ -94,16 +78,12 @@ The tag of the component root element.
 - Edge (latest)
 - Internet Explorer 9+
 
-
-
 ## Versioning
 
 Maintained under the [Semantic Versioning guidelines](http://semver.org/).
 
-
-
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [xkeshi](http://xkeshi.com)
+[MIT](http://opensource.org/licenses/MIT) © [Xkeshi](http://xkeshi.com)
 
 [⬆ back to top](#table-of-contents)
