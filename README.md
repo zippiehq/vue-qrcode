@@ -27,15 +27,15 @@ dist/
 
 ### Install
 
-```bash
-npm install @xkeshi/vue-qrcode --save-dev
+```shell
+npm install @xkeshi/vue-qrcode
 ```
 
 ### Usage
 
 - Browser: `window.VueQrcode`
-- CommonJS: `var VueQrcode = require('vue-qrcode')`
-- ES2015: `import VueQrcode from 'vue-qrcode'`
+- CommonJS: `var VueQrcode = require('@xkeshi/vue-qrcode')`
+- ES2015: `import VueQrcode from '@xkeshi/vue-qrcode'`
 
 ```js
 Vue.component('qrcode', VueQrcode);

@@ -1,7 +1,7 @@
 {
   "name": "@xkeshi/vue-qrcode",
   "description": "Qrcode component for Vue.js.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "dist/vue-qrcode.common.js",
   "module": "dist/vue-qrcode.esm.js",
   "browser": "dist/vue-qrcode.js",
@@ -10,7 +10,6 @@
   "license": "MIT",
   "author": {
     "name": "Chen Fengyuan",
-    "email": "chenfengyuan@outlook.com",
     "url": "http://chenfengyuan.com"
   },
   "files": [
@@ -44,7 +43,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.7.0",
+    "eslint": "^4.7.2",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.2.0",
     "rollup": "^0.50.0",
@@ -52,7 +51,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-watch": "^4.3.1",
-    "uglify-js": "^3.1.1"
+    "uglify-js": "^3.1.2"
   },
   "peerDependencies": {
     "vue": "^2.2.0"
