@@ -2,7 +2,7 @@
 
 ## 0.3.0 (Sep 25, 2017)
 
-- Publish to NPM with scoped name: `@xkeshi/vue-qrcode` (**BREAKING CHANGE:**).
+- Publish to NPM with scoped name: `@xkeshi/vue-qrcode` (**BREAKING CHANGE**).
 
 ## 0.2.0 (Jun 6, 2017)
 
