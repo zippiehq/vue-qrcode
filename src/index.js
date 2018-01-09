@@ -6,7 +6,7 @@ export default {
      * The value of the qrcode.
      */
     value: {
-      type: [String, Number],
+      type: null,
       required: true,
     },
 
@@ -59,7 +59,7 @@ export default {
       // eslint-disable-next-line
       new QRious(Object.assign({
         element: this.$el,
-        value: this.value,
+        value: String(this.value),
       }, this.options));
     },
   },
