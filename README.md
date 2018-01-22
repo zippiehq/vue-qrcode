@@ -1,5 +1,7 @@
 # vue-qrcode
 
+[![Downloads](https://img.shields.io/npm/dm/@xkeshi/vue-qrcode.svg)](https://www.npmjs.com/package/@xkeshi/vue-qrcode) [![Version](https://img.shields.io/npm/v/@xkeshi/vue-qrcode.svg)](https://www.npmjs.com/package/@xkeshi/vue-qrcode)
+
 > Qrcode component for [Vue.js](https://vuejs.org/). It is based on [QRious](https://github.com/neocotic/qrious).
 
 - [Website](https://xkeshi.github.io/vue-qrcode)
