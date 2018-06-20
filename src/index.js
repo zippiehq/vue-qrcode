@@ -1,29 +1,29 @@
 import QRious from 'qrious';
 
 export default {
+  name: 'qrcode',
+
   props: {
-    /*
-     * The value of the qrcode.
+    /**
+     * The options for the QR code generator.
+     * {@link https://github.com/neocotic/qrious#api}
      */
-    value: {
-      type: null,
-      required: true,
-    },
+    options: Object,
 
-    /*
-     * The options for the qrcode generator.
-     * {@link https://github.com/lindell/JsQrcode#options}
-     */
-    options: {
-      type: Object,
-    },
-
-    /*
+    /**
      * The tag of the component root element.
      */
     tag: {
       type: String,
       default: 'canvas',
+    },
+
+    /**
+     * The value of the QR code.
+     */
+    value: {
+      type: null,
+      default: '',
     },
   },
 
@@ -32,35 +32,37 @@ export default {
   },
 
   watch: {
-    /*
-     * Update qrcode when value change
+    /**
+     * Update QR code when value change.
      */
     value() {
       this.generate();
     },
 
-    /*
-     * Update qrcode when options change
+    /**
+     * Update QR code when options change.
      */
     options() {
       this.generate();
     },
   },
 
-  mounted() {
-    this.generate();
-  },
-
   methods: {
     /**
-     * Generate qrcode
+     * Generate QR code.
      */
     generate() {
-      // eslint-disable-next-line
-      new QRious(Object.assign({
-        element: this.$el,
-        value: String(this.value),
-      }, this.options));
+      if (this.$el) {
+        new QRious({
+          element: this.$el,
+          value: String(this.value),
+          ...this.options,
+        });
+      }
     },
+  },
+
+  mounted() {
+    this.generate();
   },
 };
