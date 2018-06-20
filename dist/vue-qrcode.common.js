@@ -1,20 +1,16 @@
 /*!
- * vue-qrcode v0.3.0
- * https://github.com/xkeshi/vue-qrcode
+ * vue-qrcode v1.0.0
+ * https://xkeshi.github.io/vue-qrcode
  *
- * Copyright (c) 2017 Xkeshi
+ * Copyright 2017-present Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2017-09-25T07:50:15.977Z
+ * Date: 2018-06-20T03:42:27.281Z
  */
 
 'use strict';
 
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-
-
-
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -41,8 +37,7 @@ var qrious = createCommonjsModule(function (module, exports) {
  */
 (function (global, factory) {
   module.exports = factory();
-}(commonjsGlobal, (function () { 'use strict';
-
+}(commonjsGlobal, (function () {
   /*
    * Copyright (C) 2017 Alasdair Mercer, !ninja
    *
@@ -2384,30 +2379,32 @@ var qrious = createCommonjsModule(function (module, exports) {
 
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var index = {
+  name: 'qrcode',
+
   props: {
-    /*
-     * The value of the qrcode.
+    /**
+     * The options for the QR code generator.
+     * {@link https://github.com/neocotic/qrious#api}
      */
-    value: {
-      type: String,
-      required: true
-    },
+    options: Object,
 
-    /*
-     * The options for the qrcode generator.
-     * {@link https://github.com/lindell/JsQrcode#options}
-     */
-    options: {
-      type: Object
-    },
-
-    /*
+    /**
      * The tag of the component root element.
      */
     tag: {
       type: String,
       default: 'canvas'
+    },
+
+    /**
+     * The value of the QR code.
+     */
+    value: {
+      type: null,
+      default: ''
     }
   },
 
@@ -2417,38 +2414,38 @@ var index = {
 
 
   watch: {
-    /*
-     * Update qrcode when value change
+    /**
+     * Update QR code when value change.
      */
     value: function value() {
       this.generate();
     },
 
 
-    /*
-     * Update qrcode when options change
+    /**
+     * Update QR code when options change.
      */
     options: function options() {
       this.generate();
     }
   },
 
-  mounted: function mounted() {
-    this.generate();
-  },
-
-
   methods: {
     /**
-     * Generate qrcode
+     * Generate QR code.
      */
     generate: function generate() {
-      // eslint-disable-next-line
-      new qrious(Object.assign({
-        element: this.$el,
-        value: this.value
-      }, this.options));
+      if (this.$el) {
+        new qrious(_extends({
+          element: this.$el,
+          value: String(this.value)
+        }, this.options));
+      }
     }
+  },
+
+  mounted: function mounted() {
+    this.generate();
   }
 };
 
