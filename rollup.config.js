@@ -1,31 +1,45 @@
 const babel = require('rollup-plugin-babel');
+const changeCase = require('change-case');
 const commonjs = require('rollup-plugin-commonjs');
+const createBanner = require('create-banner');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const pkg = require('./package');
 
-const now = new Date();
+pkg.name = pkg.name.replace(/^.+\//, '');
 
-export default {
+const name = changeCase.pascalCase(pkg.name);
+const banner = createBanner({
+  data: {
+    year: '2017-present',
+  },
+});
+
+module.exports = {
   input: 'src/index.js',
   output: [
     {
-      file: 'dist/vue-qrcode.js',
+      banner,
+      name,
+      file: `dist/${pkg.name}.js`,
       format: 'umd',
     },
     {
-      file: 'dist/vue-qrcode.common.js',
+      banner,
+      file: `dist/${pkg.name}.common.js`,
       format: 'cjs',
     },
     {
-      file: 'dist/vue-qrcode.esm.js',
-      format: 'es',
+      banner,
+      file: `dist/${pkg.name}.esm.js`,
+      format: 'esm',
     },
     {
-      file: 'docs/js/vue-qrcode.js',
+      banner,
+      name,
+      file: `docs/js/${pkg.name}.js`,
       format: 'umd',
     },
   ],
-  name: 'VueQrcode',
   plugins: [
     nodeResolve(),
     commonjs(),
@@ -33,14 +47,4 @@ export default {
       exclude: 'node_modules/**',
     }),
   ],
-  banner: `/*!
- * vue-qrcode v${pkg.version}
- * https://github.com/${pkg.repository}
- *
- * Copyright (c) ${now.getFullYear()} Xkeshi
- * Released under the ${pkg.license} license
- *
- * Date: ${now.toISOString()}
- */
-`,
 };
