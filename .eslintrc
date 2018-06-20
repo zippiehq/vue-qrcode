@@ -5,6 +5,7 @@
     "browser": true
   },
   "rules": {
+    "no-new": "off",
     "no-param-reassign": "off"
   }
 }
