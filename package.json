@@ -39,7 +39,7 @@
     "test": "karma start test/karma.conf.js"
   },
   "dependencies": {
-    "qrious": "^4.0.2"
+    "qrious": "git+https://github.com/zippiehq/qrious.git"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

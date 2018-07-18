@@ -417,7 +417,8 @@ var qrious = createCommonjsModule(function (module, exports) {
       var i, j;
       var qrious = this.qrious;
       var moduleSize = this.getModuleSize(frame);
-      var offset = this.getOffset(frame);
+      /** Fix for https://github.com/neocotic/qrious/issues/111 */
+      var offset = parseInt((this.element.width - frame.width * moduleSize) / 2);
       var context = this.element.getContext('2d');
 
       context.fillStyle = qrious.foreground;
