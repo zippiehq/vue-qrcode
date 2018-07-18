@@ -1,5 +1,5 @@
 {
-  "name": "@xkeshi/vue-qrcode",
+  "name": "@zippie/vue-qrcode",
   "description": "Qrcode component for Vue.js.",
   "version": "1.0.0",
   "main": "dist/vue-qrcode.common.js",
